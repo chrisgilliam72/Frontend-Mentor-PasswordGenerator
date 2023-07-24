@@ -1,0 +1,152 @@
+@font-face {
+  font-family: "JetBrainsMono";
+  src: url("./assets/fonts/JetBrainsMono-Bold.ttf");
+}
+@font-face {
+  font-family: "JetBrainsMonoItalic";
+  src: url("./assets/fonts/JetBrainsMono-BoldItalic.ttf");
+}
+@font-face {
+  font-family: "JetBrainsMonoItaliac";
+  src: url("./assets/fonts/JetBrainsMono-Italic-VariableFont_wght.ttf");
+}
+@font-face {
+  font-family: "JetBrainsMonoVariableFontWeight";
+  src: url("./assets/fonts/JetBrainsMono-VariableFont_wght.ttf");
+}
+body {
+  background-color: rgb(24, 23, 31);
+}
+
+.maincontainer {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  row-gap: 1rem;
+}
+
+.passwordheading {
+  color: #817D92;
+  font-family: JetBrainsMono;
+  font-size: 24px;
+  font-weight: 700;
+  width: 1440px;
+  height: 1em;
+}
+
+.passwordgroupbox {
+  font-family: JetBrainsMono;
+  width: 548px;
+  height: 800px;
+  display: flex;
+  flex-direction: column;
+  justify-items: center;
+  row-gap: 2rem;
+}
+
+.characterlengthbox {
+  box-sizing: border-box;
+  width: 100%;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-left: 2rem;
+  padding-right: 2rem;
+}
+
+.characterlegnthtext {
+  color: #E6E5EA;
+}
+
+.characterlegnth {
+  color: #A4FFAF;
+  font-family: JetBrains Mono;
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 700;
+}
+
+.passwordbox {
+  box-sizing: border-box;
+  color: #E6E5EA;
+  font-size: 32px;
+  width: 548px;
+  height: 80px;
+  background-color: rgb(36, 35, 44);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+.passwordsettingsbox {
+  width: 548px;
+  height: auto;
+  background-color: rgb(36, 35, 44);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  row-gap: 1rem;
+  padding-bottom: 1rem;
+}
+
+.checkboxgroup {
+  display: flex;
+  width: 476px;
+  height: auto;
+  flex-direction: column;
+  align-items: start;
+  row-gap: 0.5rem;
+  margin-top: 1rem;
+}
+.checkboxgroup label {
+  color: #E6E5EA;
+  font-family: JetBrainsMonoVariableFontWeight;
+  font-size: 18px;
+  font-weight: 700;
+}
+.checkboxgroup input[type=checkbox] {
+  accent-color: #A4FFAF;
+  height: 20px;
+  width: 20px;
+  background-color: green;
+  background: green;
+  color: green;
+}
+
+.strengthBar {
+  width: 476px;
+  height: 3em;
+  background-color: #18171F;
+  display: grid;
+  grid-template-columns: 50% 50%;
+}
+
+.strengthText {
+  color: #817D92;
+  font-family: JetBrainsMonoVariableFontWeight;
+  font-size: 18px;
+  font-weight: 700;
+  text-align: left;
+  margin-left: 2em;
+  margin-top: 0.5em;
+}
+
+.generateButton {
+  width: 476px;
+  height: 65px;
+  font-family: JetBrainsMonoVariableFontWeight;
+  font-size: 18px;
+  font-weight: 700;
+  background-color: #A4FFAF;
+}
+
+.colorbar {
+  width: 18px;
+  height: 28px;
+}/*# sourceMappingURL=site.css.map */

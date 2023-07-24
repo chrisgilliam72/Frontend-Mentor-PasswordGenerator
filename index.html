@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
-  <link rel="stylesheet" href="site.css"/>
+  <link rel="stylesheet" href="./styles/site.css"/>
   <title>Frontend Mentor | Password generator app</title>
 </head>
 <body>
@@ -16,9 +16,43 @@
   <div class="passwordgroupbox">
     <div class="passwordbox">
       <div>Password1</div>
-      <img src="./assets/images/icon-copy.svg" alt="copy"/>
+      <button style="background-color: transparent; ">
+        <img src="./assets/images/icon-copy.svg" alt="copy"/>
+      </button>
     </div>
-    <div class="passwordsettingsbox"></div>
+    <div class="passwordsettingsbox">
+      <div class="characterlengthbox">
+        <div><label class="characterlegnthtext">Character Length</label></div>
+        <div><label class="characterlegnth">10</label></div>
+      </div>
+      <div class="checkboxgroup">
+         <div>
+          <input type="checkbox" name="includeUpper" id="includeUpper">
+          <label for ="includeUpper">Include Uppercase Letters</label>
+         </div>
+        <div>
+          <input type="checkbox" name="includeLower" id="includeLower">
+          <label for ="includeLower">Include Lowercase Letters</label>
+        </div>
+        <div>
+          <input type="checkbox" name="includeNumbers" id="includeNumbers">
+          <label for ="includeNumbers">Include Numbers</label>
+        </div>
+        <div>
+          <input type="checkbox" name="includeSymbols" id="includeSymbols" >
+          <label for ="includeSymbols" >Include Symbols</label>
+        </div>
+      </div>
+      <div class="strengthBar">
+        <label class="strengthText">Strength</label>
+      </div>
+      
+        <button class="generateButton">
+          <label>Generate</label>
+          <img src="./assets/images/icon-arrow-right.svg" alt="arrow"/>
+        </button>
+      </div>
+    </div>
   </div>
 </main>
 
