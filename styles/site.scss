@@ -1,28 +1,28 @@
 @font-face {
     font-family: "JetBrainsMono";
-    src: url("./assets/fonts/JetBrainsMono-Bold.ttf");
+    src: url("../assets/fonts/JetBrainsMono-Bold.ttf");
   }
   
   @font-face {
     font-family: "JetBrainsMonoItalic";
-    src: url("./assets/fonts/JetBrainsMono-BoldItalic.ttf");
+    src: url("/assets/fonts/JetBrainsMono-BoldItalic.ttf");
   }
   
   @font-face {
     font-family: "JetBrainsMonoItaliac";
-    src: url("./assets/fonts/JetBrainsMono-Italic-VariableFont_wght.ttf");
+    src: url("/assets/fonts/JetBrainsMono-Italic-VariableFont_wght.ttf");
   }
   
   @font-face {
     font-family: "JetBrainsMonoVariableFontWeight";
-    src: url("./assets/fonts/JetBrainsMono-VariableFont_wght.ttf");
+    src: url("/assets/fonts/JetBrainsMono-VariableFont_wght.ttf");
   }
 
   $cardWidth:548px;
   $barWidth:476px;
   
   body{
-      background-color: rgb(24, 23, 31);
+      background-color: rgb(24, 23, 31); 
   }
   
   .maincontainer {
@@ -91,7 +91,7 @@
       justify-content:space-between;
       align-items: center ;
       padding-left: 1rem;
-      padding-right: 1rem
+      padding-right: 1rem;
     }
   
     .passwordsettingsbox{
@@ -102,7 +102,6 @@
       flex-direction: column;
       align-items: center ;
       row-gap: 1rem ;
-      padding-bottom: 1rem;
     }
   
     .checkboxgroup
@@ -113,7 +112,6 @@
       flex-direction: column;
       align-items: start;
       row-gap: 0.5rem;
-      margin-top: 1rem;
 
         label {
           color:  #E6E5EA;
@@ -137,7 +135,7 @@
     .strengthBar
     {
       width: $barWidth;
-      height:3em;
+      height:4em;
       background-color: #18171F;
       display: grid;
       grid-template-columns: 50% 50%;
@@ -150,7 +148,7 @@
       font-weight: 700;
       text-align: left;
       margin-left: 2em;
-      margin-top: 0.5em;
+      margin-top:1em;
     }
   
     .generateButton
@@ -168,6 +166,41 @@
       width: 18px;
       height:28px;
     }
+
+    .slidecontainer {
+      width:85%;
+    }
+    
+    .slider {
+      -webkit-appearance: none;
+      width: 100%;
+      height: 5px;
+      background:#A4FFAF;
+      outline: none;
+      opacity: 0.7;
+      -webkit-transition: .2s;
+      transition: opacity .2s;
+    } 
+    
+    .slider:hover {
+      opacity: 1;
+    }
+    
+    .slider::-webkit-slider-thumb {
+      /* /* -webkit-appearance: none;*/
+      appearance: none; 
+      width: 25px;
+      height: 25px; 
+      border-radius:50%;
+      background:#E6E5EA;
+      cursor: pointer;
+    }
+    
+    
+
+    
+
+   
   
   
   
