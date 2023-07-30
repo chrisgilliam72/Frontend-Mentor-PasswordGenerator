@@ -17,48 +17,48 @@
     </div>
     <div class="passwordgroupbox">
       <div class="passwordbox">
-        <div>Password1</div>
-        <button style="background-color: transparent; ">
+        <label readonly id="actualPasswordTxt">Password1</label>
+        <button style="background-color: transparent; " onclick="copyToClipboard()">
           <img src="./assets/images/icon-copy.svg" alt="copy" />
         </button>
       </div>
       <div class="passwordsettingsbox">
         <div class="characterlengthbox">
           <div><label class="characterlegnthtext">Character Length</label></div>
-          <div><label class="characterlegnth">10</label></div>
+          <div><input type="number" min="1" max="15" value="10" id="passwrdLenghBox" class="characterlegnth" /></div>
         </div>
-       
-          <div class="slidecontainer">
-            <input type="range" min="1" max="100" value="50" class="slider" id="myRange">
-          </div>
-          <div class="checkboxgroup">
-            <div>
-              <input type="checkbox" name="includeUpper" id="includeUpper">
-              <label for="includeUpper">Include Uppercase Letters</label>
-            </div>
-            <div>
-              <input type="checkbox" name="includeLower" id="includeLower">
-              <label for="includeLower">Include Lowercase Letters</label>
-            </div>
-            <div>
-              <input type="checkbox" name="includeNumbers" id="includeNumbers">
-              <label for="includeNumbers">Include Numbers</label>
-            </div>
-            <div>
-              <input type="checkbox" name="includeSymbols" id="includeSymbols">
-              <label for="includeSymbols">Include Symbols</label>
-            </div>
-          </div>
-          <div class="strengthBar">
-            <label class="strengthText">Strength</label>
-          </div>
 
-          <button class="generateButton" onclick="generatePassword()">
-            <label>Generate</label>
-            <img src="./assets/images/icon-arrow-right.svg" alt="arrow" />
-          </button>
+        <div class="slidecontainer">
+          <input type="range">
         </div>
+        <div class="checkboxgroup">
+          <div>
+            <input type="checkbox" name="includeUpper" id="includeUpper">
+            <label for="includeUpper">Include Uppercase Letters</label>
+          </div>
+          <div>
+            <input type="checkbox" name="includeLower" id="includeLower">
+            <label for="includeLower">Include Lowercase Letters</label>
+          </div>
+          <div>
+            <input type="checkbox" name="includeNumbers" id="includeNumbers">
+            <label for="includeNumbers">Include Numbers</label>
+          </div>
+          <div>
+            <input type="checkbox" name="includeSymbols" id="includeSymbols">
+            <label for="includeSymbols">Include Symbols</label>
+          </div>
+        </div>
+        <div class="strengthBar">
+          <label class="strengthText">Strength</label>
+        </div>
+
+        <button class="generateButton" onclick="generatePassword()">
+          <label>Generate</label>
+          <img src="./assets/images/icon-arrow-right.svg" alt="arrow" />
+        </button>
       </div>
+    </div>
     </div>
   </main>
 
@@ -77,8 +77,33 @@
 
   Generate -->
   <script>
-    function generatePassword() {
-      alert('Password!');
+    async function generatePassword() {
+      var includeUpper = document.querySelector('#includeUpper').checked;
+      var includeLower = document.querySelector('#includeLower').checked;
+      var includeNumbers = document.querySelector('#includeNumbers').checked;
+      var includeSymbols = document.querySelector('#includeSymbols').checked;
+
+      var length = document.querySelector('#passwrdLenghBox').value;
+
+
+      const response = await fetch('https://api.api-ninjas.com/v1/passwordgenerator?length='+length, {
+        method: 'Get',
+        headers: {
+          'X-Api-Key': 'QMFtSrHPQuUVLTTngCmwZw==f3mAmtmaQeV5llWG'
+        }
+      });
+
+      const jsonPassword =await response.json();
+      var jsonPasswordStr= JSON.stringify(jsonPassword);
+      var data=JSON.parse(jsonPasswordStr);
+      document.querySelector('#actualPasswordTxt').innerHTML=data.random_password;
+
+    }
+
+
+    function copyToClipboard() {
+      var actualPasswordTxt = document.querySelector('#actualPasswordTxt');
+      navigator.clipboard.writeText(actualPasswordTxt.innerHTML);
     }
   </script>
 </body>

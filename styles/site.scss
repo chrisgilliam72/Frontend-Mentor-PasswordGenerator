@@ -69,6 +69,7 @@
   
     .characterlegnthtext{
       color:#E6E5EA;
+      font-size: 18px;
   
     }
   
@@ -78,6 +79,9 @@
       font-size: 32px;
       font-style: normal;
       font-weight: 700;
+      width: 2em;
+      background-color: transparent;
+      border: none;
     }
   
     .passwordbox{
@@ -159,7 +163,6 @@
         font-size: 18px;
         font-weight: 700;
         background-color: #A4FFAF;
-
     }
   
     .colorbar{
@@ -171,31 +174,21 @@
       width:85%;
     }
     
-    .slider {
-      -webkit-appearance: none;
-      width: 100%;
-      height: 5px;
-      background:#A4FFAF;
-      outline: none;
-      opacity: 0.7;
-      -webkit-transition: .2s;
-      transition: opacity .2s;
+  //  .slider:hover {
+  //     opacity: 1;      
+  //   }
+
+    input[type='range'] {
+      width: 90%;
+      height: 10px;
+      accent-color:#A4FFAF;
+      background-color: transparent;
+      :hover {
+        opacity:1
+      }
     } 
-    
-    .slider:hover {
-      opacity: 1;
-    }
-    
-    .slider::-webkit-slider-thumb {
-      /* /* -webkit-appearance: none;*/
-      appearance: none; 
-      width: 25px;
-      height: 25px; 
-      border-radius:50%;
-      background:#E6E5EA;
-      cursor: pointer;
-    }
-    
+
+
     
 
     
