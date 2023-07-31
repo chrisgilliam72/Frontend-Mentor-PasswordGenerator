@@ -20,7 +20,39 @@
 
   $cardWidth:548px;
   $barWidth:476px;
+  $green:#A4FFAF;
+  $red:#F64A4A;
+  $orange:#FB7C58;
+  $yellow:#F8CD65;
+  $white:#E6E5EA;
+ $dark: rgb(36,35,44);
+
+  @mixin ColorBox($color){
+    width: 10px;
+    height: 28px;
+    background-color:$color;
+    border:green;
+    border-width: 10px;
+  }
+
+  .headingL {
+    font-family:JetBrainsMono;
+    font-size: 32px;
+    line-height: 43px;
+  }
+
+  .headingM {
+    font-family:JetBrainsMono;
+    font-size: 24px;
+    line-height: 31px;
+  }
   
+  .Body {
+    font-family:JetBrainsMono;
+    font-size: 18px;
+    line-height: 23px;
+  }
+
   body{
       background-color: rgb(24, 23, 31); 
   }
@@ -68,13 +100,13 @@
     }
   
     .characterlegnthtext{
-      color:#E6E5EA;
+      color:$white;
       font-size: 18px;
   
     }
   
     .characterlegnth{
-      color:#A4FFAF;
+      color:$green;
       font-family: JetBrains Mono;
       font-size: 32px;
       font-style: normal;
@@ -86,11 +118,11 @@
   
     .passwordbox{
       box-sizing: border-box;
-      color: #E6E5EA;
+      color: $white;
       font-size: 32px;
       width: $cardWidth;
       height:80px;
-      background-color: rgb(36,35,44);
+      background-color: $dark;
       display: flex;
       justify-content:space-between;
       align-items: center ;
@@ -101,11 +133,12 @@
     .passwordsettingsbox{
       width: $cardWidth;
       height:auto;
-      background-color: rgb(36,35,44);
+      background-color: $dark;
       display: flex;
       flex-direction: column;
       align-items: center ;
       row-gap: 1rem ;
+      padding-bottom: 1rem;
     }
   
     .checkboxgroup
@@ -118,19 +151,19 @@
       row-gap: 0.5rem;
 
         label {
-          color:  #E6E5EA;
+          color: $white;
           font-family: JetBrainsMonoVariableFontWeight;
           font-size: 18px;
           font-weight: 700;
         }
 
       input[type='checkbox']{
-        accent-color: #A4FFAF;
+        accent-color:$green;
         height: 20px;
         width: 20px;
-        background-color: green;
-        background:green;
-        color: green;
+        background-color: $green;
+        background:$green;
+        color:$green;
       }
     
     }
@@ -143,16 +176,25 @@
       background-color: #18171F;
       display: grid;
       grid-template-columns: 50% 50%;
+      align-items: center;
+      justify-items: center;
     }
-  
+    .StrengthBox{
+      display: flex;
+      width: auto;
+      height: auto;
+      align-content: center;
+
+      font-size:18px ;
+      font-family: JetBrains Mono;
+      color:#E6E5EA ;
+    }
     .strengthText{
       color: #817D92;
       font-family: JetBrainsMonoVariableFontWeight;
-      font-size: 18px;
+      font-size: 24px;
       font-weight: 700;
       text-align: left;
-      margin-left: 2em;
-      margin-top:1em;
     }
   
     .generateButton
@@ -162,7 +204,7 @@
         font-family: JetBrainsMonoVariableFontWeight;
         font-size: 18px;
         font-weight: 700;
-        background-color: #A4FFAF;
+        background-color: $green;
     }
   
     .colorbar{
@@ -183,10 +225,29 @@
       height: 10px;
       accent-color:#A4FFAF;
       background-color: transparent;
-      :hover {
+      &:hover {
         opacity:1
       }
-    } 
+
+   } 
+
+   .redcolorbox{
+    @include ColorBox( $red);
+   }
+
+   .orangecolorbox{
+    @include ColorBox($orange);
+   }
+
+   .greencolorbox{
+    @include ColorBox($green)
+   }
+
+   .emptycoloxbox{
+    @include ColorBox($white)
+   }
+ 
+
 
 
     

@@ -96,6 +96,7 @@ body {
   flex-direction: column;
   align-items: center;
   row-gap: 1rem;
+  padding-bottom: 1rem;
 }
 
 .checkboxgroup {
@@ -116,9 +117,9 @@ body {
   accent-color: #A4FFAF;
   height: 20px;
   width: 20px;
-  background-color: green;
-  background: green;
-  color: green;
+  background-color: #A4FFAF;
+  background: #A4FFAF;
+  color: #A4FFAF;
 }
 
 .strengthBar {
@@ -127,16 +128,26 @@ body {
   background-color: #18171F;
   display: grid;
   grid-template-columns: 50% 50%;
+  align-items: center;
+  justify-items: center;
+}
+
+.StrengthBox {
+  display: flex;
+  width: auto;
+  height: auto;
+  align-content: center;
+  font-size: 18px;
+  font-family: JetBrains Mono;
+  color: #E6E5EA;
 }
 
 .strengthText {
   color: #817D92;
   font-family: JetBrainsMonoVariableFontWeight;
-  font-size: 18px;
+  font-size: 24px;
   font-weight: 700;
   text-align: left;
-  margin-left: 2em;
-  margin-top: 1em;
 }
 
 .generateButton {
@@ -163,6 +174,38 @@ input[type=range] {
   accent-color: #A4FFAF;
   background-color: transparent;
 }
-input[type=range] :hover {
+input[type=range]:hover {
   opacity: 1;
+}
+
+.redcolorbox {
+  width: 10px;
+  height: 28px;
+  background-color: #F64A4A;
+  border: green;
+  border-width: 10px;
+}
+
+.orangecolorbox {
+  width: 10px;
+  height: 28px;
+  background-color: #FB7C58;
+  border: green;
+  border-width: 10px;
+}
+
+.greencolorbox {
+  width: 10px;
+  height: 28px;
+  background-color: #A4FFAF;
+  border: green;
+  border-width: 10px;
+}
+
+.emptycoloxbox {
+  width: 10px;
+  height: 28px;
+  background-color: #E6E5EA;
+  border: green;
+  border-width: 10px;
 }/*# sourceMappingURL=site.css.map */

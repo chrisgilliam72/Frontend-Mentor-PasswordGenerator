@@ -25,11 +25,11 @@
       <div class="passwordsettingsbox">
         <div class="characterlengthbox">
           <div><label class="characterlegnthtext">Character Length</label></div>
-          <div><input type="number" min="1" max="15" value="10" id="passwrdLenghBox" class="characterlegnth" /></div>
+          <div><label id="passwrdLenghBox" class="characterlegnth">10</label></div>
         </div>
 
         <div class="slidecontainer">
-          <input type="range">
+          <input type="range" min="3" max="10" step="1" onchange="updateComplexity(this.value)">
         </div>
         <div class="checkboxgroup">
           <div>
@@ -50,10 +50,19 @@
           </div>
         </div>
         <div class="strengthBar">
-          <label class="strengthText">Strength</label>
+          <div><label class="strengthText">Strength</label></div>
+          <div style="display: flex;width:100%; justify-content: space-around;">
+            <label class="StrengthBox">Too Weak!</label>
+            <div style="display: flex;width:auto; gap: 0.5rem">
+              <div class="redcolorbox"></div>
+              <div class="emptycoloxbox"></div>
+              <div class="emptycoloxbox"></div>
+              <div class="emptycoloxbox"></div>
+            </div>
+          </div>
         </div>
 
-        <button class="generateButton" onclick="generatePassword()">
+        <button class="generateButton" onclick="generatePassword(this.value)">
           <label>Generate</label>
           <img src="./assets/images/icon-arrow-right.svg" alt="arrow" />
         </button>
@@ -62,20 +71,6 @@
     </div>
   </main>
 
-
-
-  <!-- P4$5W0rD!
-
-  Character Length
-
-  Include Uppercase Letters
-  Include Lowercase Letters
-  Include Numbers
-  Include Symbols
-
-  Strength
-
-  Generate -->
   <script>
     async function generatePassword() {
       var includeUpper = document.querySelector('#includeUpper').checked;
@@ -84,9 +79,11 @@
       var includeSymbols = document.querySelector('#includeSymbols').checked;
 
       var length = document.querySelector('#passwrdLenghBox').value;
+      var excludeNumbers=(!includeNumbers).toString();
+      var excludeSpecialChars=(!includeSymbols).toString();
+      var url='https://api.api-ninjas.com/v1/passwordgenerator?length='+length+'&exclude_numbers='+excludeNumbers+'&exclude_special_chars='+excludeSpecialChars;
 
-
-      const response = await fetch('https://api.api-ninjas.com/v1/passwordgenerator?length='+length, {
+      const response = await fetch(url, {
         method: 'Get',
         headers: {
           'X-Api-Key': 'QMFtSrHPQuUVLTTngCmwZw==f3mAmtmaQeV5llWG'
@@ -100,7 +97,10 @@
 
     }
 
-
+    function updateComplexity(newValue) {
+      document.querySelector('#passwrdLenghBox').innerHTML=newValue;
+    }
+    
     function copyToClipboard() {
       var actualPasswordTxt = document.querySelector('#actualPasswordTxt');
       navigator.clipboard.writeText(actualPasswordTxt.innerHTML);
