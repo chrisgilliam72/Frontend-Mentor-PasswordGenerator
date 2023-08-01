@@ -239,12 +239,28 @@
     @include ColorBox($orange);
    }
 
+   .yellocolorbox{
+    @include ColorBox($yellow)
+   }
+
    .greencolorbox{
     @include ColorBox($green)
    }
 
    .emptycoloxbox{
     @include ColorBox($white)
+   }
+
+   .strengthbarscontainer{
+    display: flex;
+    width:100%; 
+    justify-content: space-around;
+   }
+
+   .strengthbars{
+    display: flex;
+    width:auto; 
+    gap: 0.5rem
    }
  
 

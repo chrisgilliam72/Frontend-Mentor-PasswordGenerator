@@ -25,7 +25,7 @@
       <div class="passwordsettingsbox">
         <div class="characterlengthbox">
           <div><label class="characterlegnthtext">Character Length</label></div>
-          <div><label id="passwrdLenghBox" class="characterlegnth">10</label></div>
+          <div><label id="passwrdLenghBox" class="characterlegnth">5</label></div>
         </div>
 
         <div class="slidecontainer">
@@ -51,13 +51,40 @@
         </div>
         <div class="strengthBar">
           <div><label class="strengthText">Strength</label></div>
-          <div style="display: flex;width:100%; justify-content: space-around;">
+          <div class="strengthbarscontainer" id="passwordtooWeak" >
             <label class="StrengthBox">Too Weak!</label>
-            <div style="display: flex;width:auto; gap: 0.5rem">
+            <div class="strengthbars">
               <div class="redcolorbox"></div>
               <div class="emptycoloxbox"></div>
               <div class="emptycoloxbox"></div>
               <div class="emptycoloxbox"></div>
+            </div>
+          </div>
+          <div class="strengthbarscontainer" id="passwordWeak">
+            <label class="StrengthBox">WEAK</label>
+            <div class="strengthbars">
+              <div class="orangecolorbox"></div>
+              <div class="orangecolorbox"></div>
+              <div class="emptycoloxbox"></div>
+              <div class="emptycoloxbox"></div>
+            </div>
+          </div>
+          <div class="strengthbarscontainer" id="passwordMedium">
+            <label class="StrengthBox">MEDIUM</label>
+            <div class="strengthbars">
+              <div class="yellocolorbox"></div>
+              <div class="yellocolorbox"></div>
+              <div class="yellocolorbox"></div>
+              <div class="emptycoloxbox"></div>
+            </div>
+          </div>
+          <div class="strengthbarscontainer" id="passwordStrong">
+            <label class="StrengthBox">STRONG</label>
+            <div class="strengthbars">
+              <div class="greencolorbox"></div>
+              <div class="greencolorbox"></div>
+              <div class="greencolorbox"></div>
+              <div class="greencolorbox"></div>
             </div>
           </div>
         </div>
@@ -70,42 +97,7 @@
     </div>
     </div>
   </main>
-
-  <script>
-    async function generatePassword() {
-      var includeUpper = document.querySelector('#includeUpper').checked;
-      var includeLower = document.querySelector('#includeLower').checked;
-      var includeNumbers = document.querySelector('#includeNumbers').checked;
-      var includeSymbols = document.querySelector('#includeSymbols').checked;
-
-      var length = document.querySelector('#passwrdLenghBox').value;
-      var excludeNumbers=(!includeNumbers).toString();
-      var excludeSpecialChars=(!includeSymbols).toString();
-      var url='https://api.api-ninjas.com/v1/passwordgenerator?length='+length+'&exclude_numbers='+excludeNumbers+'&exclude_special_chars='+excludeSpecialChars;
-
-      const response = await fetch(url, {
-        method: 'Get',
-        headers: {
-          'X-Api-Key': 'QMFtSrHPQuUVLTTngCmwZw==f3mAmtmaQeV5llWG'
-        }
-      });
-
-      const jsonPassword =await response.json();
-      var jsonPasswordStr= JSON.stringify(jsonPassword);
-      var data=JSON.parse(jsonPasswordStr);
-      document.querySelector('#actualPasswordTxt').innerHTML=data.random_password;
-
-    }
-
-    function updateComplexity(newValue) {
-      document.querySelector('#passwrdLenghBox').innerHTML=newValue;
-    }
-    
-    function copyToClipboard() {
-      var actualPasswordTxt = document.querySelector('#actualPasswordTxt');
-      navigator.clipboard.writeText(actualPasswordTxt.innerHTML);
-    }
-  </script>
+  <script type = "text/javascript" src="functions.js"> </script>
 </body>
 
 </html>

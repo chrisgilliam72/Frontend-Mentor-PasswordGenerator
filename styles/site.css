@@ -14,6 +14,24 @@
   font-family: "JetBrainsMonoVariableFontWeight";
   src: url("/assets/fonts/JetBrainsMono-VariableFont_wght.ttf");
 }
+.headingL {
+  font-family: JetBrainsMono;
+  font-size: 32px;
+  line-height: 43px;
+}
+
+.headingM {
+  font-family: JetBrainsMono;
+  font-size: 24px;
+  line-height: 31px;
+}
+
+.Body {
+  font-family: JetBrainsMono;
+  font-size: 18px;
+  line-height: 23px;
+}
+
 body {
   background-color: rgb(24, 23, 31);
 }
@@ -137,7 +155,7 @@ body {
   width: auto;
   height: auto;
   align-content: center;
-  font-size: 18px;
+  font-size: 22px;
   font-family: JetBrains Mono;
   color: #E6E5EA;
 }
@@ -153,7 +171,7 @@ body {
 .generateButton {
   width: 476px;
   height: 65px;
-  font-family: JetBrainsMonoVariableFontWeight;
+  font-family: JetBrainsMono;
   font-size: 18px;
   font-weight: 700;
   background-color: #A4FFAF;
@@ -194,6 +212,14 @@ input[type=range]:hover {
   border-width: 10px;
 }
 
+.yellocolorbox {
+  width: 10px;
+  height: 28px;
+  background-color: #F8CD65;
+  border: green;
+  border-width: 10px;
+}
+
 .greencolorbox {
   width: 10px;
   height: 28px;
@@ -208,4 +234,16 @@ input[type=range]:hover {
   background-color: #E6E5EA;
   border: green;
   border-width: 10px;
+}
+
+.strengthbarscontainer {
+  display: flex;
+  width: 100%;
+  justify-content: space-around;
+}
+
+.strengthbars {
+  display: flex;
+  width: auto;
+  gap: 0.5rem;
 }/*# sourceMappingURL=site.css.map */
