@@ -155,7 +155,7 @@ body {
   width: auto;
   height: auto;
   align-content: center;
-  font-size: 22px;
+  font-size: 18px;
   font-family: JetBrains Mono;
   color: #E6E5EA;
 }
@@ -171,10 +171,14 @@ body {
 .generateButton {
   width: 476px;
   height: 65px;
-  font-family: JetBrainsMono;
+  font-family: JetBrainsMonoVariableFontWeight;
   font-size: 18px;
   font-weight: 700;
   background-color: #A4FFAF;
+}
+.generateButton:hover {
+  background-color: rgb(36, 35, 44);
+  color: #A4FFAF;
 }
 
 .colorbar {
@@ -184,6 +188,13 @@ body {
 
 .slidecontainer {
   width: 85%;
+}
+
+.copied {
+  display: none;
+  font-family: JetBrains Mono;
+  font-size: 18px;
+  color: #A4FFAF;
 }
 
 input[type=range] {
@@ -239,7 +250,10 @@ input[type=range]:hover {
 .strengthbarscontainer {
   display: flex;
   width: 100%;
-  justify-content: space-around;
+  justify-content: end;
+  align-items: center;
+  gap: 1rem;
+  padding-right: 2rem;
 }
 
 .strengthbars {

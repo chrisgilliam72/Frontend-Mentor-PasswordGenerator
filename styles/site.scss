@@ -205,6 +205,10 @@
         font-size: 18px;
         font-weight: 700;
         background-color: $green;
+        &:hover{
+          background-color: $dark;
+          color:$green;
+        }
     }
   
     .colorbar{
@@ -214,6 +218,13 @@
 
     .slidecontainer {
       width:85%;
+    }
+
+    .copied {
+      display:none;
+      font-family:JetBrains Mono;
+      font-size: 18px;
+      color:$green;
     }
     
   //  .slider:hover {
@@ -254,7 +265,10 @@
    .strengthbarscontainer{
     display: flex;
     width:100%; 
-    justify-content: space-around;
+    justify-content:end;
+    align-items: center;
+    gap:1rem;
+    padding-right: 2rem;
    }
 
    .strengthbars{

@@ -25,7 +25,7 @@ async function generatePassword() {
     var jsonPasswordStr= JSON.stringify(jsonPassword);
     var data=JSON.parse(jsonPasswordStr);
     document.querySelector('#actualPasswordTxt').innerHTML=data.random_password;
-
+    document.querySelector('#copiedText').style.display='none';
   }
 
   function updateComplexity(newValue) {
@@ -40,8 +40,11 @@ async function generatePassword() {
   }
   
   function copyToClipboard() {
-    var actualPasswordTxt = document.querySelector('#actualPasswordTxt');
+    let actualPasswordTxt = document.querySelector('#actualPasswordTxt');
+    let copiedText= document.querySelector('#copiedText');
+    
     navigator.clipboard.writeText(actualPasswordTxt.innerHTML);
+    copiedText.style.display='block';
   }
 
   function displayVeryWeak()

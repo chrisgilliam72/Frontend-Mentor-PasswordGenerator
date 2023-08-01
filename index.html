@@ -18,9 +18,13 @@
     <div class="passwordgroupbox">
       <div class="passwordbox">
         <label readonly id="actualPasswordTxt">Password1</label>
-        <button style="background-color: transparent; " onclick="copyToClipboard()">
-          <img src="./assets/images/icon-copy.svg" alt="copy" />
-        </button>
+        <div style="display:flex">
+          <label class="copied" id="copiedText">copied</label>
+          <button style="background-color: transparent; border: none; " onclick="copyToClipboard()">
+            <img src="./assets/images/icon-copy.svg" alt="copy" />
+          </button>
+        </div>
+
       </div>
       <div class="passwordsettingsbox">
         <div class="characterlengthbox">
@@ -91,7 +95,7 @@
 
         <button class="generateButton" onclick="generatePassword(this.value)">
           <label>Generate</label>
-          <img src="./assets/images/icon-arrow-right.svg" alt="arrow" />
+          <img src="./assets/images/icon-arrow-right.svg" alt="arrow" class="invertedArrow"/>
         </button>
       </div>
     </div>
