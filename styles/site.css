@@ -247,9 +247,6 @@ input[type=range]:hover {
 }
 
 @media (max-width: 600px) {
-  .maincontainer {
-    width: 400px;
-  }
   .passwordgroupbox {
     width: 400px;
   }
