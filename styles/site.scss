@@ -19,6 +19,7 @@
   }
 
   $cardWidth:548px;
+  $cardMobileWidth:400px;
   $barWidth:476px;
   $green:#A4FFAF;
   $red:#F64A4A;
@@ -58,7 +59,7 @@
   }
   
   .maincontainer {
-      width: 100%;
+      width:100%;
       height: 100vh;
       display: flex;
       flex-direction: column;
@@ -66,18 +67,9 @@
       align-items: center;
       row-gap: 1rem;
     }
-  
-    .passwordheading
-    {
-      color: #817D92;
-      font-weight: 700;
-      width: 1440px;
-      height:1em;
-    }
-  
+
     .passwordgroupbox{
-      font-family: JetBrainsMono;
-      width: $cardWidth;
+      width:  $cardWidth;
       height: 800px;
       display: flex;
       flex-direction: column;
@@ -85,6 +77,29 @@
       row-gap: 2rem;
   
     }
+  
+    .passwordheading
+    {
+      color: #817D92;
+      font-weight: 700;
+      width: 100%;
+      height:1em;
+      text-align: center;
+    }
+  
+    .passwordbox{
+      box-sizing: border-box;
+      color: $white;
+      width: 100%;
+      height:80px;
+      background-color: $dark;
+      display: flex;
+      justify-content:space-between;
+      align-items: center ;
+      padding-left: 1rem;
+      padding-right: 1rem;
+    }
+   
   
     .characterlengthbox{
       box-sizing: border-box;
@@ -111,21 +126,10 @@
       border: none;
     }
   
-    .passwordbox{
-      box-sizing: border-box;
-      color: $white;
-      width: $cardWidth;
-      height:80px;
-      background-color: $dark;
-      display: flex;
-      justify-content:space-between;
-      align-items: center ;
-      padding-left: 1rem;
-      padding-right: 1rem;
-    }
+
   
     .passwordsettingsbox{
-      width: $cardWidth;
+      width: 100%;
       height:auto;
       background-color: $dark;
       display: flex;
@@ -138,7 +142,7 @@
     .checkboxgroup
     {
       display: flex;
-      width: $barWidth;
+      width: 95%;
       height:auto;
       flex-direction: column;
       align-items: start;
@@ -160,10 +164,9 @@
     
     }
   
-  
     .strengthBar
     {
-      width: $barWidth;
+      width: 95%;
       height:4em;
       background-color: #18171F;
       display: grid;
@@ -186,7 +189,7 @@
   
     .generateButton
     {
-        width: $barWidth;
+        width: 95%;
         height: 65px;
         font-weight: 700;
         background-color: $green;
@@ -202,7 +205,7 @@
     }
 
     .slidecontainer {
-      width:85%;
+      width:95%;
     }
 
     .copied {
@@ -261,7 +264,17 @@
    }
  
 
+   @media (max-width: 600px) {
 
+
+    .maincontainer {
+      width:$cardMobileWidth
+    }
+
+    .passwordgroupbox{
+      width:$cardMobileWidth
+    }
+  }
 
     
 

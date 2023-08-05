@@ -46,21 +46,34 @@ body {
   row-gap: 1rem;
 }
 
-.passwordheading {
-  color: #817D92;
-  font-weight: 700;
-  width: 1440px;
-  height: 1em;
-}
-
 .passwordgroupbox {
-  font-family: JetBrainsMono;
   width: 548px;
   height: 800px;
   display: flex;
   flex-direction: column;
   justify-items: center;
   row-gap: 2rem;
+}
+
+.passwordheading {
+  color: #817D92;
+  font-weight: 700;
+  width: 100%;
+  height: 1em;
+  text-align: center;
+}
+
+.passwordbox {
+  box-sizing: border-box;
+  color: #E6E5EA;
+  width: 100%;
+  height: 80px;
+  background-color: rgb(36, 35, 44);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-left: 1rem;
+  padding-right: 1rem;
 }
 
 .characterlengthbox {
@@ -87,21 +100,8 @@ body {
   border: none;
 }
 
-.passwordbox {
-  box-sizing: border-box;
-  color: #E6E5EA;
-  width: 548px;
-  height: 80px;
-  background-color: rgb(36, 35, 44);
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding-left: 1rem;
-  padding-right: 1rem;
-}
-
 .passwordsettingsbox {
-  width: 548px;
+  width: 100%;
   height: auto;
   background-color: rgb(36, 35, 44);
   display: flex;
@@ -113,7 +113,7 @@ body {
 
 .checkboxgroup {
   display: flex;
-  width: 476px;
+  width: 95%;
   height: auto;
   flex-direction: column;
   align-items: start;
@@ -133,7 +133,7 @@ body {
 }
 
 .strengthBar {
-  width: 476px;
+  width: 95%;
   height: 4em;
   background-color: #18171F;
   display: grid;
@@ -157,7 +157,7 @@ body {
 }
 
 .generateButton {
-  width: 476px;
+  width: 95%;
   height: 65px;
   font-weight: 700;
   background-color: #A4FFAF;
@@ -173,7 +173,7 @@ body {
 }
 
 .slidecontainer {
-  width: 85%;
+  width: 95%;
 }
 
 .copied {
@@ -244,4 +244,13 @@ input[type=range]:hover {
   display: flex;
   width: auto;
   gap: 0.5rem;
+}
+
+@media (max-width: 600px) {
+  .maincontainer {
+    width: 400px;
+  }
+  .passwordgroupbox {
+    width: 400px;
+  }
 }/*# sourceMappingURL=site.css.map */
