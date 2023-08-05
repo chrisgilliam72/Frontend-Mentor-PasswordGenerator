@@ -28,14 +28,39 @@ async function generatePassword() {
     document.querySelector('#copiedText').style.display='none';
   }
 
+  function AllChecked()
+  {
+    var includeUpper = document.querySelector('#includeUpper').checked;
+    var includeLower = document.querySelector('#includeLower').checked;
+    var includeNumbers = document.querySelector('#includeNumbers').checked;
+    var includeSymbols = document.querySelector('#includeSymbols').checked;
+
+    return includeUpper && includeLower && includeNumbers && includeSymbols;
+  }
+
+  function updateComplexityFromChckBox()
+  {
+      let passwrdLength= document.querySelector('#passwordLengthRange').value;
+      let complexity= parseInt(passwrdLength);
+      updateComplexity(complexity);
+  }
+
   function updateComplexity(newValue) {
+
+    let allChecked=AllChecked();
+
     document.querySelector('#passwrdLenghBox').innerHTML=newValue;
     let complexity= parseInt(newValue);
     switch (true){
-        case complexity<=3: displayVeryWeak();break;
-        case complexity>3 && complexity<=6: displayWeak();break;
-        case complexity>6 && complexity<10: displayMedium();break;
-        case complexity>=10: displayStrong();break;
+        case complexity<=4: displayVeryWeak();break;
+        case complexity>4 && complexity<=8: displayWeak();break;
+        case complexity>8: 
+          if (allChecked) {
+            displayStrong();
+          }
+          else
+            displayMedium();break;
+        
     }
   }
   

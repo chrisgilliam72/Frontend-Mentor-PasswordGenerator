@@ -26,7 +26,7 @@
   line-height: 31px;
 }
 
-.Body {
+.bodyM {
   font-family: JetBrainsMono;
   font-size: 18px;
   line-height: 23px;
@@ -48,8 +48,6 @@ body {
 
 .passwordheading {
   color: #817D92;
-  font-family: JetBrainsMono;
-  font-size: 24px;
   font-weight: 700;
   width: 1440px;
   height: 1em;
@@ -78,13 +76,10 @@ body {
 
 .characterlegnthtext {
   color: #E6E5EA;
-  font-size: 18px;
 }
 
 .characterlegnth {
   color: #A4FFAF;
-  font-family: JetBrains Mono;
-  font-size: 32px;
   font-style: normal;
   font-weight: 700;
   width: 2em;
@@ -95,7 +90,6 @@ body {
 .passwordbox {
   box-sizing: border-box;
   color: #E6E5EA;
-  font-size: 32px;
   width: 548px;
   height: 80px;
   background-color: rgb(36, 35, 44);
@@ -127,8 +121,6 @@ body {
 }
 .checkboxgroup label {
   color: #E6E5EA;
-  font-family: JetBrainsMonoVariableFontWeight;
-  font-size: 18px;
   font-weight: 700;
 }
 .checkboxgroup input[type=checkbox] {
@@ -155,15 +147,11 @@ body {
   width: auto;
   height: auto;
   align-content: center;
-  font-size: 18px;
-  font-family: JetBrains Mono;
   color: #E6E5EA;
 }
 
 .strengthText {
   color: #817D92;
-  font-family: JetBrainsMonoVariableFontWeight;
-  font-size: 24px;
   font-weight: 700;
   text-align: left;
 }
@@ -171,8 +159,6 @@ body {
 .generateButton {
   width: 476px;
   height: 65px;
-  font-family: JetBrainsMonoVariableFontWeight;
-  font-size: 18px;
   font-weight: 700;
   background-color: #A4FFAF;
 }
@@ -192,8 +178,6 @@ body {
 
 .copied {
   display: none;
-  font-family: JetBrains Mono;
-  font-size: 18px;
   color: #A4FFAF;
 }
 

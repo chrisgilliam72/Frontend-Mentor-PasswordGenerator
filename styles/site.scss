@@ -47,7 +47,7 @@
     line-height: 31px;
   }
   
-  .Body {
+  .bodyM {
     font-family:JetBrainsMono;
     font-size: 18px;
     line-height: 23px;
@@ -70,8 +70,6 @@
     .passwordheading
     {
       color: #817D92;
-      font-family:JetBrainsMono;
-      font-size: 24px;
       font-weight: 700;
       width: 1440px;
       height:1em;
@@ -101,14 +99,11 @@
   
     .characterlegnthtext{
       color:$white;
-      font-size: 18px;
   
     }
   
     .characterlegnth{
       color:$green;
-      font-family: JetBrains Mono;
-      font-size: 32px;
       font-style: normal;
       font-weight: 700;
       width: 2em;
@@ -119,7 +114,6 @@
     .passwordbox{
       box-sizing: border-box;
       color: $white;
-      font-size: 32px;
       width: $cardWidth;
       height:80px;
       background-color: $dark;
@@ -152,8 +146,6 @@
 
         label {
           color: $white;
-          font-family: JetBrainsMonoVariableFontWeight;
-          font-size: 18px;
           font-weight: 700;
         }
 
@@ -184,15 +176,10 @@
       width: auto;
       height: auto;
       align-content: center;
-
-      font-size:18px ;
-      font-family: JetBrains Mono;
       color:#E6E5EA ;
     }
     .strengthText{
       color: #817D92;
-      font-family: JetBrainsMonoVariableFontWeight;
-      font-size: 24px;
       font-weight: 700;
       text-align: left;
     }
@@ -201,8 +188,6 @@
     {
         width: $barWidth;
         height: 65px;
-        font-family: JetBrainsMonoVariableFontWeight;
-        font-size: 18px;
         font-weight: 700;
         background-color: $green;
         &:hover{
@@ -222,8 +207,6 @@
 
     .copied {
       display:none;
-      font-family:JetBrains Mono;
-      font-size: 18px;
       color:$green;
     }
     

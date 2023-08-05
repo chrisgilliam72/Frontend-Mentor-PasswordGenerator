@@ -13,13 +13,13 @@
 <body>
   <main class="maincontainer">
     <div>
-      <span class="passwordheading">Password Generator</span>
+      <span class="headingM passwordheading">Password Generator</span>
     </div>
     <div class="passwordgroupbox">
       <div class="passwordbox">
-        <label readonly id="actualPasswordTxt">Password1</label>
+        <label class="headingL" readonly id="actualPasswordTxt">Password1</label>
         <div style="display:flex">
-          <label class="copied" id="copiedText">copied</label>
+          <label class="bodyM copied" id="copiedText">copied</label>
           <button style="background-color: transparent; border: none; " onclick="copyToClipboard()">
             <img src="./assets/images/icon-copy.svg" alt="copy" />
           </button>
@@ -28,35 +28,35 @@
       </div>
       <div class="passwordsettingsbox">
         <div class="characterlengthbox">
-          <div><label class="characterlegnthtext">Character Length</label></div>
-          <div><label id="passwrdLenghBox" class="characterlegnth">5</label></div>
+          <div><label class="bodyM characterlegnthtext">Character Length</label></div>
+          <div><label id="passwrdLenghBox" class="headingL characterlegnth">5</label></div>
         </div>
 
         <div class="slidecontainer">
-          <input type="range" min="3" max="10" step="1" onchange="updateComplexity(this.value)">
+          <input type="range" id="passwordLengthRange" min="3" max="10" step="1" onchange="updateComplexity(this.value)">
         </div>
-        <div class="checkboxgroup">
+        <div class="bodyM checkboxgroup">
           <div>
-            <input type="checkbox" name="includeUpper" id="includeUpper">
+            <input type="checkbox" name="includeUpper" id="includeUpper" onchange="updateComplexityFromChckBox()">
             <label for="includeUpper">Include Uppercase Letters</label>
           </div>
           <div>
-            <input type="checkbox" name="includeLower" id="includeLower">
+            <input type="checkbox" name="includeLower" id="includeLower" onchange="updateComplexityFromChckBox()">
             <label for="includeLower">Include Lowercase Letters</label>
           </div>
           <div>
-            <input type="checkbox" name="includeNumbers" id="includeNumbers">
+            <input type="checkbox" name="includeNumbers" id="includeNumbers" onchange="updateComplexityFromChckBox()">
             <label for="includeNumbers">Include Numbers</label>
           </div>
           <div>
-            <input type="checkbox" name="includeSymbols" id="includeSymbols">
+            <input type="checkbox" name="includeSymbols" id="includeSymbols" onchange="updateComplexityFromChckBox()">
             <label for="includeSymbols">Include Symbols</label>
           </div>
         </div>
         <div class="strengthBar">
-          <div><label class="strengthText">Strength</label></div>
+          <div><label class="bodyM strengthText">Strength</label></div>
           <div class="strengthbarscontainer" id="passwordtooWeak" >
-            <label class="StrengthBox">Too Weak!</label>
+            <label class="headingM StrengthBox">Too Weak!</label>
             <div class="strengthbars">
               <div class="redcolorbox"></div>
               <div class="emptycoloxbox"></div>
@@ -65,7 +65,7 @@
             </div>
           </div>
           <div class="strengthbarscontainer" id="passwordWeak">
-            <label class="StrengthBox">WEAK</label>
+            <label class="headingM StrengthBox">WEAK</label>
             <div class="strengthbars">
               <div class="orangecolorbox"></div>
               <div class="orangecolorbox"></div>
@@ -74,7 +74,7 @@
             </div>
           </div>
           <div class="strengthbarscontainer" id="passwordMedium">
-            <label class="StrengthBox">MEDIUM</label>
+            <label class="headingM StrengthBox">MEDIUM</label>
             <div class="strengthbars">
               <div class="yellocolorbox"></div>
               <div class="yellocolorbox"></div>
@@ -83,7 +83,7 @@
             </div>
           </div>
           <div class="strengthbarscontainer" id="passwordStrong">
-            <label class="StrengthBox">STRONG</label>
+            <label class="headingM StrengthBox">STRONG</label>
             <div class="strengthbars">
               <div class="greencolorbox"></div>
               <div class="greencolorbox"></div>
@@ -94,7 +94,7 @@
         </div>
 
         <button class="generateButton" onclick="generatePassword(this.value)">
-          <label>Generate</label>
+          <label class="bodyM">Generate</label>
           <img src="./assets/images/icon-arrow-right.svg" alt="arrow" class="invertedArrow"/>
         </button>
       </div>
@@ -103,5 +103,4 @@
   </main>
   <script type = "text/javascript" src="functions.js"> </script>
 </body>
-
 </html>
