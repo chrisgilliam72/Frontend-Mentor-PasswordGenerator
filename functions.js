@@ -9,7 +9,7 @@ async function generatePassword() {
     var includeNumbers = document.querySelector('#includeNumbers').checked;
     var includeSymbols = document.querySelector('#includeSymbols').checked;
 
-    var length = document.querySelector('#passwrdLenghBox').value;
+    var length = document.querySelector('#passwrdLenghBox').innerHTML;
     var excludeNumbers=(!includeNumbers).toString();
     var excludeSpecialChars=(!includeSymbols).toString();
     var url='https://api.api-ninjas.com/v1/passwordgenerator?length='+length+'&exclude_numbers='+excludeNumbers+'&exclude_special_chars='+excludeSpecialChars;
